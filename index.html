@@ -2,45 +2,442 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>EarlyWire: your morning, ready before you are</title>
-<meta name="description" content="EarlyWire gets your sports and news videos, new music and written briefs ready overnight, on your own iPhone, iPad or Mac. No account, no server.">
-<meta property="og:title" content="EarlyWire">
-<meta property="og:description" content="Your morning, ready before you are.">
-<meta property="og:image" content="https://earlywire.app/icon.png">
+<meta name="description" content="EarlyWire builds your morning overnight on your own iPhone, iPad or Mac: sports and news videos, new music and written briefs on anything, to watch, read or listen to. No account, no server, no ads.">
+<meta name="theme-color" content="#070f24">
+<link rel="canonical" href="https://earlywire.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EarlyWire">
+<meta property="og:title" content="EarlyWire: your morning, ready before you are">
+<meta property="og:description" content="Sports and news videos, new music and written briefs, built overnight on your own device and waiting when you wake up.">
+<meta property="og:url" content="https://earlywire.app/">
+<meta property="og:image" content="https://earlywire.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"EarlyWire","applicationCategory":"NewsApplication","operatingSystem":"iOS, iPadOS, macOS","description":"Builds a personal morning overnight on the user's own device: sports and news videos, new music and written briefs, to watch, read or listen to.","url":"https://earlywire.app/","author":{"@type":"Person","name":"Sean Scott"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<header class="hero">
-  <img src="icon.png" alt="EarlyWire app icon: a sunrise over a sound wave">
-  <h1>EarlyWire</h1>
-  <p>Your morning, ready before you are.</p>
-  <a class="badge soon" href="#about">Coming to iPhone, iPad and Mac</a>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<nav class="nav" id="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="apple-touch-icon.png" alt="" width="30" height="30">Early<i>Wire</i></a>
+    <ul>
+      <li><a href="#sleep">While you sleep</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#watch">Watch</a></li>
+      <li><a href="#ideas">Ideas</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn sun small" href="#get">Get early access</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="stars" id="stars" aria-hidden="true"></svg>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="dateline">Your morning &middot; 6:00 AM &middot; ready</p>
+      <h1>Your morning, <em>ready before you are.</em></h1>
+      <p class="lede">EarlyWire reads the channels, news and topics you care about while you sleep, then has it waiting when you wake: sports and news videos, new music, and written briefs you can read or have read to you.</p>
+      <div class="cta-row">
+        <a class="btn sun" href="#get">Get early access</a>
+        <a class="btn ghost" href="#watch">&#9654;&#xFE0E; Watch it work</a>
+      </div>
+      <p class="platforms"><span>iPhone</span><span>iPad</span><span>Mac</span><span>No account</span><span>No ads</span><span>No tracking</span></p>
+    </div>
+    <div class="hero-phone">
+      <div class="phone">
+        <div class="screen">
+          <video id="heroVideo" src="assets/video/hero.mp4" poster="assets/img/poster-hero.jpg" muted loop playsinline autoplay preload="auto" aria-label="A short loop of EarlyWire's setup: choosing templates and building the morning"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="wire" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 70 C 120 70 160 20 240 70 S 380 120 480 70 600 10 700 70 820 110 920 70 1040 30 1140 70 1260 100 1340 70 1400 62 1440 70"/>
+    <path d="M0 84 C 160 84 220 40 320 84 S 520 124 640 84 840 36 960 84 1160 118 1280 84 1400 76 1440 84"/>
+  </svg>
 </header>
 
-<main id="about">
-  <p>EarlyWire gets your mornings ready overnight, on your own device: the day's best sports and news videos, new music from your favorite artists, and written briefs about the companies, topics or hobbies you follow, to read or to listen to.</p>
+<main id="main">
 
-  <div class="grid">
-    <div class="card"><h2>Videos and music, one tap</h2>
-      <p>Sports highlights, top news stories and new songs, picked by rules you can change. Tap Play all and they play in the YouTube app, ad-free if you have Premium.</p></div>
-    <div class="card"><h2>Written briefs</h2>
-      <p>Follow anything: clients, competitors, a topic, a recipe box. Each item shows the article's own opening sentence, with a link to read more. Make as many briefs as you like.</p></div>
-    <div class="card"><h2>Listen</h2>
-      <p>Hear your brief read aloud, with "More" and "Next" from your headphones, the lock screen or your voice. Start it with Siri or a Lock Screen control.</p></div>
-    <div class="card"><h2>Private by design</h2>
-      <p>Everything is worked out on your device. No account, no server, no ads and no tracking. Add your own Claude key if you want better summaries.</p></div>
+<!-- WHILE YOU SLEEP -->
+<section class="sleep" id="sleep">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="dateline">The overnight shift</p>
+      <h2>Drag the night.<br>Watch your morning get built.</h2>
+      <p class="lede">EarlyWire works while you sleep, so the first thing you do is press play, not search.</p>
+    </div>
+    <div class="sky-card reveal" id="skyCard">
+      <div class="sky" id="sky"></div>
+      <svg class="sky-stars" id="skyStars" aria-hidden="true"></svg>
+      <div class="orb" aria-hidden="true"></div>
+      <div>
+        <div class="clock" id="clock" aria-live="polite">10:00<small>PM</small></div>
+        <div class="slider-wrap">
+          <label for="night">Drag from 10 PM to 7 AM</label>
+          <input type="range" id="night" min="0" max="540" step="5" value="0">
+        </div>
+      </div>
+      <ol class="log" id="log">
+        <li data-at="0"><time>10:00 PM</time><div><b>You go to sleep.</b><span>Your phone charges. Nothing for you to do.</span></div></li>
+        <li data-at="180"><time>1:00 AM</time><div><b>iOS gives EarlyWire a turn.</b><span>iOS decides when, usually overnight. If it skips a night, the app catches up the moment you open it.</span></div></li>
+        <li data-at="330"><time>3:30 AM</time><div><b>It reads, picks and writes.</b><span>Channel feeds, news, your keywords. It chooses by the rules you set, then checks each summary against the source.</span></div></li>
+        <li data-at="480"><time>6:00 AM</time><div><b>Briefs ready.</b><span>A quiet notification. Sports, News, Music and your written briefs are on Today.</span></div></li>
+      </ol>
+    </div>
+    <p class="honest">Times are an example. iOS chooses when background work runs, so EarlyWire also builds whatever is due when you open it, and says how long ago each part was built.</p>
   </div>
+</section>
 
-  <p class="muted">Widgets for the Home and Lock Screens show what's ready and when the next briefs build.</p>
+<!-- COMPOSE -->
+<section class="compose" id="compose">
+  <div class="wrap compose-grid">
+    <div class="reveal">
+      <p class="dateline">Try it</p>
+      <h2>Compose your morning.</h2>
+      <p class="lede" style="margin-top:1rem">Tick what you want and watch Today fill in. In the app you can start from a template, or just describe your morning in a sentence.</p>
+      <div class="chips" role="group" aria-label="Choose what goes in your morning">
+        <button class="chip s" aria-pressed="true" data-k="sports"><span class="dot"></span>Sports highlights</button>
+        <button class="chip n" aria-pressed="false" data-k="news"><span class="dot"></span>Breaking news</button>
+        <button class="chip m" aria-pressed="false" data-k="music"><span class="dot"></span>Top 10 music videos</button>
+        <button class="chip b" aria-pressed="false" data-k="brief"><span class="dot"></span>A written brief</button>
+      </div>
+      <p class="fine" style="margin-top:1.2rem">Examples only. In the app, the picks come from the channels, artists and keywords you choose.</p>
+    </div>
+    <div class="today reveal" aria-live="polite">
+      <div>
+        <p class="dateline">Example</p>
+        <h3>Friday, October 9</h3>
+        <p class="meta" id="todayMeta">Ready &middot; built today at 6:03 AM</p>
+      </div>
+      <div class="tcard s on" data-k="sports">
+        <header><span class="badge">&#9917;&#xFE0E;</span><h4>Daily Sports Brief</h4><span>45 min</span></header>
+        <ol><li>Week 5 Game Highlights <small>NFL &middot; 17 min</small></li><li>Preseason Full Game Highlights <small>NBA &middot; 15 min</small></li><li>Round 2 Highlights <small>PGA Tour &middot; 10 min</small></li></ol>
+      </div>
+      <div class="tcard n" data-k="news">
+        <header><span class="badge">&#9993;&#xFE0E;</span><h4>Daily News Brief</h4><span>31 min</span></header>
+        <ol><li>Senate passes the funding bill <small>CNN &middot; 6 min</small></li><li>Storm moves up the coast <small>Fox News &middot; 4 min</small></li><li>Markets open higher <small>MS NOW &middot; 5 min</small></li></ol>
+      </div>
+      <div class="tcard m" data-k="music">
+        <header><span class="badge">&#9835;</span><h4>Top 10 Music Videos</h4><span>39 min</span></header>
+        <ol><li>The week's number one <small>Music chart &middot; 4 min</small></li><li>The week's number two <small>Music chart &middot; 3 min</small></li><li>The week's number three <small>Music chart &middot; 4 min</small></li></ol>
+      </div>
+      <div class="tcard b" data-k="brief">
+        <header><span class="badge">&#9998;&#xFE0E;</span><h4>AI News</h4><span>20 items</span></header>
+        <ol><li>New chip promises faster on-device AI <small>Reuters</small></li><li>Model makers tighten rules on abuse <small>The Verge</small></li></ol>
+      </div>
+      <p class="empty" id="todayEmpty" hidden>Nothing picked. Tick something to see it appear.</p>
+      <div class="total"><span id="totalLabel">Total</span><span id="totalMin">45 min</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES: sticky phone -->
+<section class="pillars" id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="dateline">What it does</p>
+      <h2>Seven small things that add up to a better morning.</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="steps" id="steps">
+        <article class="step active" data-img="phone-01-first-run">
+          <div class="kick"><span class="num c-a">1</span><span class="dateline">Set it up</span></div>
+          <h3>Describe your morning in your own words.</h3>
+          <p>"I follow the Braves, local Atlanta news and upbeat 90s country." EarlyWire fills in the sports, news, music and a written brief for you. Or tick a template and go.</p>
+          <ul><li>Templates combine: Sports Enthusiast, Breaking News, Top 10 Music Videos.</li><li>Change anything later, one setting at a time or in a sentence.</li></ul>
+          <div class="inline-phone phone"><div class="screen"><img src="assets/img/phone-01-first-run.jpg" alt="EarlyWire's first screen: describe your morning, or pick templates" loading="lazy" width="880" height="1912"></div></div>
+        </article>
+        <article class="step" data-img="phone-02-today">
+          <div class="kick"><span class="num c-s">2</span><span class="dateline">Watch</span></div>
+          <h3>Sports, news and music, in one tap.</h3>
+          <p>Each morning's picks are ranked by your rules and trimmed to the time you have. Tap <b>Play all</b> and the whole list opens in the YouTube app, with your own account and Premium benefits.</p>
+          <ul><li>45-minute sports, 30-minute music, as short or long as you like.</li><li>EarlyWire only reads public YouTube information. It never changes your account.</li></ul>
+          <div class="inline-phone phone"><div class="screen"><img src="assets/img/phone-02-today.jpg" alt="The Today screen with a Daily Sports Brief and a Play all button" loading="lazy" width="880" height="1912"></div></div>
+        </article>
+        <article class="step" data-img="phone-03-written-brief">
+          <div class="kick"><span class="num c-b">3</span><span class="dateline">Read</span></div>
+          <h3>Written briefs on anything you follow.</h3>
+          <p>Competitors, a hobby, a team, a recipe box. Give a brief its keywords and EarlyWire gathers the news, groups the repeats and shows the article's own opening sentence with a link to read more.</p>
+          <ul><li>Make as many briefs as you like, each with its own name and schedule.</li><li>Every day, every other week, or once a month.</li></ul>
+          <div class="inline-phone phone"><div class="screen"><img src="assets/img/phone-03-written-brief.jpg" alt="A written brief about electric vehicles with linked articles" loading="lazy" width="880" height="1912"></div></div>
+        </article>
+        <article class="step" data-img="phone-04-listen">
+          <div class="kick"><span class="num c-b">4</span><span class="dateline">Listen</span></div>
+          <h3>Have it read to you. Hands free.</h3>
+          <p>Switch a brief from Read to Listen and the words follow along as they are spoken. Say or press <b>More</b>, <b>Next</b> or <b>Repeat</b> from your headphones, your lock screen or your voice.</p>
+          <ul><li>Start it with Siri: "Listen to my briefs in EarlyWire."</li><li>A Lock Screen and Control Center control starts it too.</li></ul>
+          <div class="inline-phone phone"><div class="screen"><img src="assets/img/phone-04-listen.jpg" alt="The Listen player reading an item with the spoken word highlighted" loading="lazy" width="880" height="1912"></div></div>
+        </article>
+        <article class="step" data-img="phone-05-describe-a-brief">
+          <div class="kick"><span class="num c-a">5</span><span class="dateline">Describe</span></div>
+          <h3>Start a brief from a sentence.</h3>
+          <p>Say what you want to follow and EarlyWire suggests a name, topics and keywords. You review them before anything is saved. It uses Apple's on-device model, or Claude if you add your own key.</p>
+          <div class="inline-phone phone"><div class="screen"><img src="assets/img/phone-05-describe-a-brief.jpg" alt="The New brief screen where a topic is described in a sentence" loading="lazy" width="880" height="1912"></div></div>
+        </article>
+        <article class="step" data-img="phone-06-sports-adjust">
+          <div class="kick"><span class="num c-a">6</span><span class="dateline">Adjust</span></div>
+          <h3>Change a setting by saying what you'd change.</h3>
+          <p>"Make it a bit shorter and drop the Shorts." EarlyWire proposes exact changes, such as 45 to 30 minutes. Each one has a switch, and nothing is saved until you approve.</p>
+          <ul><li>Every proposed change is checked in code against what you actually typed.</li></ul>
+          <div class="inline-phone phone"><div class="screen"><img src="assets/img/phone-06-sports-adjust.jpg" alt="Proposed settings changes with switches and an Apply button" loading="lazy" width="880" height="1912"></div></div>
+        </article>
+        <article class="step" data-img="phone-08-widget">
+          <div class="kick"><span class="num c-a">7</span><span class="dateline">Glance</span></div>
+          <h3>Widgets that tell you it's ready.</h3>
+          <p>Home Screen and Lock Screen widgets show what was built, how long each part is and when the next build is due, so you know before you open anything.</p>
+          <div class="inline-phone phone"><div class="screen"><img src="assets/img/phone-08-widget.jpg" alt="The EarlyWire widget showing Sports, News, Music and a brief, all ready" loading="lazy" width="880" height="1912"></div></div>
+        </article>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="phone"><div class="screen" id="stageScreen">
+          <img class="on" data-name="phone-01-first-run" src="assets/img/phone-01-first-run.jpg" alt="" width="880" height="1912">
+          <img data-name="phone-02-today" src="assets/img/phone-02-today.jpg" alt="" loading="lazy" width="880" height="1912">
+          <img data-name="phone-03-written-brief" src="assets/img/phone-03-written-brief.jpg" alt="" loading="lazy" width="880" height="1912">
+          <img data-name="phone-04-listen" src="assets/img/phone-04-listen.jpg" alt="" loading="lazy" width="880" height="1912">
+          <img data-name="phone-05-describe-a-brief" src="assets/img/phone-05-describe-a-brief.jpg" alt="" loading="lazy" width="880" height="1912">
+          <img data-name="phone-06-sports-adjust" src="assets/img/phone-06-sports-adjust.jpg" alt="" loading="lazy" width="880" height="1912">
+          <img data-name="phone-08-widget" src="assets/img/phone-08-widget.jpg" alt="" loading="lazy" width="880" height="1912">
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO THEATRE -->
+<section class="theatre" id="watch">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="dateline">Watch it work</p>
+      <h2>Real recordings. Real app.</h2>
+      <p class="lede">Every clip is the app itself, recorded in the iPhone simulator with sample data.</p>
+    </div>
+    <div class="theatre-grid reveal">
+      <div class="tabs" role="tablist" aria-label="Videos" id="tabs">
+        <button class="tab" role="tab" aria-selected="true" data-v="tour"><span class="n">1</span><span><b>The one-minute tour</b><span>Pick, build, watch, change, schedule, read, Today</span></span></button>
+        <button class="tab" role="tab" aria-selected="false" data-v="setup"><span class="n">2</span><span><b>Set up in a minute</b><span>Tick templates, build your first morning</span></span></button>
+        <button class="tab" role="tab" aria-selected="false" data-v="listen"><span class="n">3</span><span><b>Read, then listen</b><span>Switch a brief to Listen and follow along</span></span></button>
+        <button class="tab" role="tab" aria-selected="false" data-v="describe"><span class="n">4</span><span><b>Start a brief from a sentence</b><span>Describe a topic, review the suggestions</span></span></button>
+      </div>
+      <figure class="player">
+        <div class="phone"><div class="screen"><video id="theatreVideo" controls playsinline preload="none" poster="assets/img/poster-tour.jpg" aria-label="EarlyWire video"></video></div></div>
+        <figcaption><span class="dur" id="vDur">1:05</span><strong id="vTitle">The one-minute tour</strong><span id="vDesc">Choose what you want, watch EarlyWire build it, play it in YouTube, change a setting with a sentence, pick the days, then read or listen. It ends on Today.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="cases" id="ideas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="dateline">Ways to use it</p>
+      <h2>One app, a lot of different mornings.</h2>
+      <p class="lede">These are ideas for how people could set it up. Each takes a few taps, or a sentence.</p>
+    </div>
+    <div class="case-grid">
+      <article class="case reveal" style="--c:var(--sports)">
+        <span class="who">The sports fan</span>
+        <h3>Last night's games, before the coffee's done.</h3>
+        <p>Highlights from the leagues you follow, trimmed to the time you have, with a few quick hits for the rest.</p>
+        <div class="morning"><div><time>6:00</time><span>45 minutes of NFL, NBA, college and MLB highlights</span></div><div><time>6:02</time><span>Tap Play all, watch while you get ready</span></div></div>
+        <div class="tags"><span>Sports Enthusiast template</span><span>Quick hits</span><span>45 min limit</span></div>
+      </article>
+      <article class="case reveal" style="--c:var(--news)">
+        <span class="who">The commuter</span>
+        <h3>The news, read to you on the way in.</h3>
+        <p>Top stories and your local station, then a written brief you can listen to hands free in the car or on the train.</p>
+        <div class="morning"><div><time>7:10</time><span>"Hey Siri, listen to my briefs in EarlyWire"</span></div><div><time>7:11</time><span>Say "More" on the ones that matter, "Next" on the rest</span></div></div>
+        <div class="tags"><span>Breaking News template</span><span>Listen</span><span>Siri</span></div>
+      </article>
+      <article class="case reveal" style="--c:var(--brief)">
+        <span class="who">The founder</span>
+        <h3>What your competitors did overnight.</h3>
+        <p>A brief per company or topic, with keywords and exceptions. Flag leadership changes and big announcements at the top.</p>
+        <div class="morning"><div><time>Mon</time><span>A weekly brief on three competitors</span></div><div><time>6:15</time><span>Open the brief, skim twenty items, tap through to two</span></div></div>
+        <div class="tags"><span>Written briefs</span><span>Flags</span><span>Weekly</span></div>
+      </article>
+      <article class="case reveal" style="--c:var(--music)">
+        <span class="who">The music hunter</span>
+        <h3>New songs from the artists you actually like.</h3>
+        <p>Start with a genre pack or the YouTube music chart, add your favorite artists, and let a few older favorites mix in.</p>
+        <div class="morning"><div><time>6:00</time><span>Ten new songs, 39 minutes, newest first</span></div><div><time>8:30</time><span>Play all on the drive to work</span></div></div>
+        <div class="tags"><span>Top 10 template</span><span>Artists</span><span>Older favorites</span></div>
+      </article>
+      <article class="case reveal" style="--c:#b45309">
+        <span class="who">The home cook</span>
+        <h3>A brief called "Dinner Ideas."</h3>
+        <p>Name a brief anything. Add keywords like slow cooker, sheet pan or air fryer, and get a fresh list each week.</p>
+        <div class="morning"><div><time>Sun</time><span>A weekly brief of new recipes and techniques</span></div><div><time>Sun</time><span>Pick three for the week, done</span></div></div>
+        <div class="tags"><span>Custom name</span><span>Keywords</span><span>Every week</span></div>
+      </article>
+      <article class="case reveal" style="--c:#475569">
+        <span class="who">The curious</span>
+        <h3>A slow trickle on one subject.</h3>
+        <p>Follow a hobby, a city, a new technology or a long-running story once a month, without another feed to check.</p>
+        <div class="morning"><div><time>1st</time><span>A monthly brief on the topic</span></div><div><time>1st</time><span>Read what changed, ignore the noise</span></div></div>
+        <div class="tags"><span>Monthly</span><span>Describe it in a sentence</span></div>
+      </article>
+    </div>
+    <p class="note reveal">These are illustrative setups, not customer stories.</p>
+  </div>
+</section>
+
+<!-- DEVICES -->
+<section class="devices" id="devices">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="dateline">Everywhere you wake up</p>
+      <h2>iPhone, iPad and Mac. The same morning on each.</h2>
+      <p class="lede">Each build happens on that device, so each one keeps its own settings and briefs.</p>
+    </div>
+    <div class="seg reveal" role="tablist" aria-label="Device">
+      <button role="tab" aria-selected="true" data-d="iphone">iPhone</button>
+      <button role="tab" aria-selected="false" data-d="ipad">iPad</button>
+      <button role="tab" aria-selected="false" data-d="mac">Mac</button>
+    </div>
+    <div class="shots" id="shots-iphone" tabindex="0" aria-label="iPhone screenshots">
+      <figure class="shot"><div class="phone"><div class="screen"><img src="assets/img/phone-02-today.jpg" alt="Today on iPhone" loading="lazy" width="880" height="1912"></div></div><figcaption>Today</figcaption></figure>
+      <figure class="shot"><div class="phone"><div class="screen"><img src="assets/img/phone-03-written-brief.jpg" alt="A written brief on iPhone" loading="lazy" width="880" height="1912"></div></div><figcaption>A written brief</figcaption></figure>
+      <figure class="shot"><div class="phone"><div class="screen"><img src="assets/img/phone-04-listen.jpg" alt="Listen on iPhone" loading="lazy" width="880" height="1912"></div></div><figcaption>Listen</figcaption></figure>
+      <figure class="shot"><div class="phone"><div class="screen"><img src="assets/img/phone-05-describe-a-brief.jpg" alt="Describe a brief on iPhone" loading="lazy" width="880" height="1912"></div></div><figcaption>Describe a brief</figcaption></figure>
+      <figure class="shot"><div class="phone"><div class="screen"><img src="assets/img/phone-06-sports-adjust.jpg" alt="Adjust with words on iPhone" loading="lazy" width="880" height="1912"></div></div><figcaption>Adjust with words</figcaption></figure>
+      <figure class="shot"><div class="phone"><div class="screen"><img src="assets/img/phone-07-settings.jpg" alt="Settings on iPhone" loading="lazy" width="880" height="1912"></div></div><figcaption>Settings</figcaption></figure>
+    </div>
+    <div class="shots" id="shots-ipad" tabindex="0" aria-label="iPad screenshots" hidden>
+      <figure class="shot"><div class="tablet"><img src="assets/img/ipad-02-today.jpg" alt="Today on iPad" loading="lazy" width="1125" height="1500"></div><figcaption>Today</figcaption></figure>
+      <figure class="shot"><div class="tablet"><img src="assets/img/ipad-03-written-brief.jpg" alt="A written brief on iPad" loading="lazy" width="1125" height="1500"></div><figcaption>A written brief</figcaption></figure>
+      <figure class="shot"><div class="tablet"><img src="assets/img/ipad-04-listen.jpg" alt="Listen on iPad" loading="lazy" width="1125" height="1500"></div><figcaption>Listen</figcaption></figure>
+      <figure class="shot"><div class="tablet"><img src="assets/img/ipad-06-sports-adjust.jpg" alt="Adjust with words on iPad" loading="lazy" width="1125" height="1500"></div><figcaption>Adjust with words</figcaption></figure>
+    </div>
+    <div class="shots" id="shots-mac" tabindex="0" aria-label="Mac screenshots" hidden>
+      <figure class="shot"><div class="laptop"><img src="assets/img/mac-02-today.jpg" alt="Today on Mac" loading="lazy" width="1800" height="1125"></div><figcaption>Today</figcaption></figure>
+      <figure class="shot"><div class="laptop"><img src="assets/img/mac-03-written-brief.jpg" alt="A written brief on Mac" loading="lazy" width="1800" height="1125"></div><figcaption>A written brief</figcaption></figure>
+      <figure class="shot"><div class="laptop"><img src="assets/img/mac-04-listen.jpg" alt="Listen on Mac" loading="lazy" width="1800" height="1125"></div><figcaption>Listen</figcaption></figure>
+      <figure class="shot"><div class="laptop"><img src="assets/img/mac-05-describe-a-brief.jpg" alt="Describe a brief on Mac" loading="lazy" width="1800" height="1125"></div><figcaption>Describe a brief</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="privacy" id="privacy">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="dateline">Private by design</p>
+      <h2>There is no EarlyWire server to trust.</h2>
+      <p class="lede">The app does the work on your device. We never see your channels, your briefs or what you ask.</p>
+    </div>
+    <div class="priv-grid">
+      <div class="reveal">
+        <ul class="checks">
+          <li><div><b>No account.</b><span>Open it and start. There is nothing to sign up for.</span></div></li>
+          <li><div><b>No ads, no analytics, no tracking.</b><span>Nothing in the app reports back to us.</span></div></li>
+          <li><div><b>Your data stays on your device.</b><span>Settings, briefs and keys live in the app's private storage and your Keychain. Delete the app and they go.</span></div></li>
+          <li><div><b>AI that stays on your device by default.</b><span>Apple's on-device model helps set things up. Claude is optional, with your own key, and only when you use it.</span></div></li>
+        </ul>
+      </div>
+      <div class="flow reveal">
+        <svg viewBox="0 0 460 330" role="img" aria-label="Where information goes: from your device to YouTube and news sites for public information, optionally to Anthropic if you add your own key, and nothing to EarlyWire">
+          <rect class="node" x="150" y="118" width="160" height="92" rx="20"/>
+          <text x="230" y="154" text-anchor="middle" font-weight="700" font-size="17">Your device</text>
+          <text class="mut" x="230" y="178" text-anchor="middle" font-size="12.5">settings · briefs · keys</text>
+          <rect class="node" x="14" y="20" width="132" height="54" rx="14"/>
+          <text x="80" y="43" text-anchor="middle" font-size="13" font-weight="650">YouTube</text><text class="mut" x="80" y="60" text-anchor="middle" font-size="11.5">public channel info</text>
+          <rect class="node" x="314" y="20" width="132" height="54" rx="14"/>
+          <text x="380" y="43" text-anchor="middle" font-size="13" font-weight="650">News sites</text><text class="mut" x="380" y="60" text-anchor="middle" font-size="11.5">articles and feeds</text>
+          <rect class="node" x="14" y="256" width="132" height="54" rx="14"/>
+          <text x="80" y="279" text-anchor="middle" font-size="13" font-weight="650">Anthropic</text><text class="mut" x="80" y="296" text-anchor="middle" font-size="11.5">only with your key</text>
+          <rect class="node" x="314" y="256" width="132" height="54" rx="14" style="stroke:#d33"/>
+          <text x="380" y="279" text-anchor="middle" font-size="13" font-weight="650">EarlyWire</text><text class="mut" x="380" y="296" text-anchor="middle" font-size="11.5">receives nothing</text>
+          <path class="line" d="M146 66 C 190 80 200 100 205 118"/><path class="line" d="M314 66 C 270 80 260 100 255 118"/>
+          <path class="line opt" d="M146 264 C 190 250 200 230 205 210"/>
+          <path class="line none" d="M314 264 C 270 250 260 230 255 210"/>
+          <text x="230" y="320" text-anchor="middle" class="mut" font-size="11">dashed: optional or never</text>
+        </svg>
+      </div>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th>&nbsp;</th><th>EarlyWire</th><th>Typical news and playlist apps</th></tr></thead>
+        <tbody>
+          <tr><td>Account required</td><td class="y">No</td><td class="n">Usually</td></tr>
+          <tr><td>A server holding your reading habits</td><td class="y">None</td><td class="n">Yes</td></tr>
+          <tr><td>Ads and tracking</td><td class="y">None</td><td class="n">Common</td></tr>
+          <tr><td>You choose the sources and the rules</td><td class="y">Yes, every one</td><td class="n">Rarely</td></tr>
+          <tr><td>Shows where each summary came from</td><td class="y">Always, with a link</td><td class="n">Varies</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note reveal">Read the full <a href="privacy.html">privacy policy</a>. Comparison is of design choices, not of any named product.</p>
+  </div>
+</section>
+
+<!-- VOICES -->
+<section class="voices" id="voices">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="dateline">First impressions</p>
+      <h2 id="voicesTitle">Early days.</h2>
+    </div>
+    <div class="quotes" id="quotes">
+      <div class="invite reveal" id="invite">
+        <h3>Be one of the first voices.</h3>
+        <p>EarlyWire is in private testing with a small group. Their words will appear here, with their permission, once they have lived with it for a while. If you try it, tell us what you think.</p>
+        <a class="btn solid" href="mailto:support@earlywire.app?subject=What%20I%20think%20of%20EarlyWire">Share your thoughts</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="dateline">Questions</p><h2>Straight answers.</h2></div>
+    <div class="faq-list reveal">
+      <details><summary>Is it free?</summary><p>Yes. EarlyWire is free and has no in-app purchases. If you choose to add your own Claude key, Anthropic bills usage to your own account there. That is optional.</p></details>
+      <details><summary>Do I need an account?</summary><p>No. There is no EarlyWire account. You only sign in to Google if you turn on emailing a finished brief to yourself or your team, and then only to send mail you asked for.</p></details>
+      <details><summary>Does it download or copy YouTube videos?</summary><p>No. It reads public information about videos and channels to choose what to show. When you tap Play all, the list opens in the YouTube app or on youtube.com, with your own account and any Premium benefits you have.</p></details>
+      <details><summary>When does it build my morning?</summary><p>iOS decides when background work runs, which is usually overnight while your device charges. Whatever is due is also built the moment you open the app, and each part shows when it was last built. On a Mac it builds on schedule while the app is open or at login.</p></details>
+      <details><summary>Do I need Apple Intelligence or Claude?</summary><p>No. Without either, EarlyWire picks and groups stories by rules, and shows the article's own first sentence under each headline. Apple's on-device model, on devices that have it, helps with setup. Claude, with your own key, improves choices and suggestions.</p></details>
+      <details><summary>Can I trust the summaries?</summary><p>Each item shows the article's own opening sentence with a link to the original, rather than a rewrite. Where a model writes a summary, the app checks it against the source and drops it if it can't be backed up.</p></details>
+      <details><summary>Which devices does it run on?</summary><p>iPhone and iPad with iOS or iPadOS 26.1 or later, and Mac with macOS 26 or later.</p></details>
+      <details><summary>Is EarlyWire affiliated with YouTube, Google or Anthropic?</summary><p>No. It is an independent app. YouTube, Google and Claude are trademarks of their owners.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- GET -->
+<section class="final" id="get">
+  <svg class="stars" id="stars2" aria-hidden="true" style="position:absolute;inset:0;z-index:-1;opacity:.6"></svg>
+  <div class="wrap">
+    <img src="icon.png" alt="EarlyWire app icon: a sunrise over a sound wave" width="96" height="96">
+    <h2>Wake up to your morning, already made.</h2>
+    <p>EarlyWire is coming to the App Store for iPhone, iPad and Mac. Tell us you're interested and we'll send you a note the day it's ready.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn sun" href="mailto:support@earlywire.app?subject=EarlyWire%20early%20access&amp;body=Please%20let%20me%20know%20when%20EarlyWire%20is%20ready.">Get early access</a>
+      <a class="btn ghost" href="#watch">Watch the tour again</a>
+    </div>
+    <p class="fine" style="color:var(--night-muted)">This opens an email to support@earlywire.app. We use your address only to reply.</p>
+  </div>
+</section>
 </main>
 
-<footer>
-  <a href="privacy.html">Privacy policy</a>
-  <a href="terms.html">Terms of service</a>
-  <p>&copy; 2026 Sean Scott</p>
+<footer class="site">
+  <div><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a><a href="mailto:support@earlywire.app">support@earlywire.app</a></div>
+  <p>&copy; 2026 Sean Scott. EarlyWire is an independent app, not affiliated with or endorsed by YouTube, Google or Anthropic.</p>
 </footer>
+
+<script src="site.js"></script>
 </body>
 </html>
