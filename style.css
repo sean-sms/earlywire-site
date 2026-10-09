@@ -1,0 +1,25 @@
+:root { color-scheme: light dark; --bg:#f5f4f1; --fg:#1c1c1e; --muted:#6b6b70; --accent:#0f766e; --card:#fff; --sun1:#ffe9b0; --sun2:#cfe0fa; }
+@media (prefers-color-scheme: dark) { :root { --bg:#000; --fg:#f2f2f7; --muted:#a1a1a6; --accent:#2dd4bf; --card:#1c1c1e; --sun1:#3a2a12; --sun2:#0b1f4a; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.55 -apple-system, system-ui, "Helvetica Neue", sans-serif; }
+main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 .25rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 .4rem; }
+p, li { color: var(--fg); }
+.muted { color: var(--muted); }
+a { color: var(--accent); }
+.card { background: var(--card); border-radius: 16px; padding: 1.1rem 1.25rem; margin: 1.25rem 0; }
+nav { margin-bottom: 2rem; } nav a { margin-right: 1.25rem; }
+
+/* Home page */
+.hero { background: linear-gradient(180deg, var(--sun1), var(--sun2) 70%, transparent); padding: 3.5rem 1.25rem 2.5rem; text-align: center; }
+.hero img { width: 120px; height: 120px; border-radius: 27%; box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+.hero h1 { font-size: 3rem; margin-top: 1rem; font-stretch: condensed; letter-spacing: -.01em; }
+.hero p { font-size: 1.25rem; max-width: 30rem; margin: .5rem auto 0; }
+.badge { display: inline-block; margin-top: 1.5rem; padding: .6rem 1.2rem; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 600; text-decoration: none; }
+.badge.soon { opacity: .85; }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin: 2rem 0; }
+.grid .card { margin: 0; }
+.grid h2 { margin-top: 0; font-size: 1.1rem; }
+footer { text-align: center; color: var(--muted); padding: 2rem 1rem 3rem; font-size: .95rem; }
+footer a { margin: 0 .6rem; }
