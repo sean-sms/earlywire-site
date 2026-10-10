@@ -28,16 +28,22 @@
 
 <nav class="nav" id="nav" aria-label="Main">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="apple-touch-icon.png" alt="" width="30" height="30">Early<i>Wire</i></a>
-    <ul>
+    <a class="brand" href="#top"><img src="apple-touch-icon.png" alt="" width="30" height="30"><span class="wm">Early<i>Wire</i></span></a>
+    <ul id="menu">
       <li><a href="#sleep">While you sleep</a></li>
+      <li><a href="#compose">Try it</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#watch">Watch</a></li>
       <li><a href="#ideas">Ideas</a></li>
+      <li><a href="#devices">Devices</a></li>
       <li><a href="#privacy">Privacy</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li class="menu-cta"><a class="btn sun" href="#get">Get early access</a></li>
     </ul>
-    <a class="btn sun small" href="#get">Get early access</a>
+    <div class="nav-right">
+      <a class="btn sun small nav-cta" href="#get">Get early access</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 

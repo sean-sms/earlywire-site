@@ -34,6 +34,20 @@
       bar.style.setProperty('--p', h > 0 ? (window.scrollY / h).toFixed(4) : 0);
     }
   }
+  var mbtn = $('#menuBtn');
+  function setMenu(open) {
+    if (!mbtn) return;
+    nav.classList.toggle('open', open);
+    mbtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    mbtn.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+  }
+  if (mbtn) {
+    mbtn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+    $$('#menu a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { setMenu(false); mbtn.focus(); } });
+    document.addEventListener('click', function (e) { if (!nav.contains(e.target)) setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 760) setMenu(false); });
+  }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
