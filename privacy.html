@@ -22,7 +22,7 @@
 <main class="doc">
 
 <h1><b>Privacy policy</b></h1>
-<p>EarlyWire, by Sean Scott. Last updated October 11, 2026.</p>
+<p>EarlyWire, by Sean Scott. Last updated October 12, 2026.</p>
 <h2><b>The short version</b></h2>
 <p>EarlyWire runs on your device. It has no server of its own and no account with us. We don't collect, store, sell or share your information, and the app has no ads, analytics or tracking.</p>
 <h2><b>What stays on your device</b></h2>
@@ -33,7 +33,7 @@
   <li><b>Your settings.</b> Your channels and artists, rules, schedules, and your written briefs with their names, keywords, exceptions and any email recipients you entered.</li>
   <li><b>Your latest builds.</b> The most recent picks on Today (video and song titles, channels and links), the history of recent builds (what was built, when, and any notes), and the latest few builds of each written brief (headlines, short excerpts from articles, outlet names and links). This lets one device show what another already built, and avoids building the same morning twice.</li>
 </ul>
-<p>Not included: your Google sign-in and your Claude key, which each device keeps for itself. You can turn syncing off under Settings, Schedule and Account, iCloud. Deleting the app does not remove the copies in iCloud; you can manage them in your device's iCloud storage settings.</p>
+<p>Not included: your Google sign-in, which each device keeps for itself, and your Claude key unless you choose to share it (see below). You can turn syncing off under Settings, Schedule and Account, iCloud. Deleting the app does not remove the copies in iCloud; you can manage them in your device's iCloud storage settings.</p>
 <h2><b>What the app reads, and from whom</b></h2>
 <ul>
   <li><b>YouTube.</b> To find new videos and songs from the channels you choose, the app asks the YouTube Data API for public information (channel feeds, video titles, lengths and view counts) using an API key belonging to the app. It does not read or change your YouTube account. When you ask the setup helpers to suggest channels or artists, the app also looks each suggested name up on YouTube to confirm it exists; those lookups contain only the public channel handle. Playing your picks opens the YouTube app or youtube.com. <a href="https://www.youtube.com/t/terms">YouTube's Terms of Service</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> apply to that use.</li>
@@ -47,6 +47,7 @@
   <li><b>Your briefs.</b> The headlines, snippets and article text the app picked, so Claude can choose and summarize items.</li>
   <li><b>Your requests to the setup helpers.</b> When you use "Set it up for me", "Suggest Settings", "Suggest more keywords", "Find Suggestions" or "Adjust with words", the app sends the words you typed (for example, a description of your morning or a topic), along with what the request needs to make sense: your brief's name and keywords, the names of channels already on your list, and the current values of the settings you are adjusting.</li>
 </ul>
+<p><b>Optional: use your key on all your devices.</b> Under Settings, AI, you can turn on "Use this key on all my devices". The key is then also kept as a synchronizable item in iCloud Keychain, which Apple encrypts end to end, so your other devices signed in to the same Apple Account can offer to use it. It is off by default, it is not sent to us, and turning it off or removing the key removes that shared copy. Other devices that already took the key keep their own copy.</p>
 <p>Your key is stored in your Keychain and goes only to Anthropic, under <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a> and your own agreement with them. We never see your key or your requests.</p>
 <p>Without a key, nothing is sent to Anthropic. On devices that support Apple Intelligence, the same helpers use Apple's on-device model, so what you type is processed on your device. Without either, the helpers are hidden and the app uses simple rules.</p>
 <h2><b>Notifications, widgets, Siri and Listen</b></h2>
