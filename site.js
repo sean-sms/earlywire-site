@@ -46,7 +46,7 @@
     $$('#menu a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { setMenu(false); mbtn.focus(); } });
     document.addEventListener('click', function (e) { if (!nav.contains(e.target)) setMenu(false); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 760) setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1100) setMenu(false); });
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();

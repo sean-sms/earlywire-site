@@ -97,18 +97,26 @@ section { padding-block: clamp(4rem, 9vw, 7.5rem); }
 .nav.open .menu-btn span:nth-child(2) { opacity: 0; }
 .nav.open .menu-btn span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .menu-cta { display: none; }
-@media (max-width: 760px) {
+.nav ul a { white-space: nowrap; }
+.nav .wrap { flex-wrap: nowrap; }
+.brand { flex-shrink: 0; }
+/* Eight links and a button need about 1100px. Below that the links move into the hamburger menu,
+   so they never wrap or collide. */
+@media (max-width: 1100px) {
   .menu-btn { display: grid; }
   .nav ul { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; padding: .4rem var(--gutter) 1.2rem; background: color-mix(in srgb, var(--night) 96%, transparent); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 18px 30px rgba(0, 0, 0, .35); max-height: calc(100vh - 4rem); overflow-y: auto; }
   .nav.open ul { display: flex; }
   .nav.open { background: color-mix(in srgb, var(--night) 96%, transparent); }
   .nav ul li a:not(.btn) { display: block; padding: .95rem .2rem; font-size: 1.1rem; color: var(--night-fg); border-bottom: 1px solid rgba(255,255,255,.1); }
-  .menu-cta { display: block; margin-top: 1rem; }
-  .menu-cta .btn { width: 100%; justify-content: center; }
-  .nav-cta { display: none; }
-  /* legal pages: keep the three links visible instead of a menu */
+  /* legal pages: three links stay visible instead of a menu */
   .nav.simple ul { display: flex; position: static; flex-direction: row; gap: 1rem; padding: 0; background: none; box-shadow: none; backdrop-filter: none; }
   .nav.simple ul li a:not(.btn) { padding: 0; border: 0; font-size: .95rem; color: var(--night-muted); }
+}
+/* On a phone there is no room for the button beside the menu button, so it joins the menu. */
+@media (max-width: 520px) {
+  .nav-cta { display: none; }
+  .nav:not(.simple) .menu-cta { display: block; margin-top: 1rem; }
+  .menu-cta .btn { width: 100%; justify-content: center; }
 }
 
 /* ---------- hero ---------- */
