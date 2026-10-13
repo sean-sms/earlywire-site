@@ -332,6 +332,32 @@ details p { color: var(--muted); padding-bottom: 1.2rem; }
 .final img { width: 96px; height: 96px; border-radius: 26%; box-shadow: 0 14px 40px rgba(0,0,0,.4); }
 .final h2 { font-size: clamp(2.6rem, 8vw, 5.4rem); color: #fff; max-width: 14ch; }
 .final p { color: var(--night-muted); max-width: 34rem; }
+/* More from SMS Apps: the sister app's picture card, in its own dusk sky. */
+.studio { background: var(--night); color: var(--night-fg); padding-block: clamp(3.5rem, 8vw, 6rem); border-top: 1px solid rgba(255,255,255,.08); }
+.studio .dateline { color: var(--sun); margin-bottom: 1.2rem; }
+.studio-card { display: grid; grid-template-columns: 1.15fr 1fr; overflow: hidden; border-radius: 24px; color: var(--night-fg); text-decoration: none;
+  background: #111b3a; border: 1px solid rgba(255,255,255,.1); transition: transform .25s ease, box-shadow .25s ease; }
+.studio-card:hover { transform: translateY(-4px); box-shadow: 0 24px 50px rgba(0,0,0,.45); text-decoration: none; }
+.studio-card .art { position: relative; min-height: 260px; overflow: hidden;
+  background: linear-gradient(180deg, #232a5c 0%, #4b4f9a 34%, #9a77ad 62%, #e3a08c 84%, #f8bb6c 100%); }
+.studio-card .art::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 34%; pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 120' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' fill-opacity='.18' d='M0 70 L60 40 L110 62 L180 18 L240 58 L300 34 L360 66 L430 24 L500 60 L560 38 L600 56 V120 H0Z'/%3E%3Cpath fill='%23000' fill-opacity='.22' d='M0 98 L80 72 L150 92 L230 64 L320 100 L400 78 L480 102 L550 84 L600 96 V120 H0Z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat; }
+.studio-card .dsun { position: absolute; left: 50%; bottom: 10%; width: 44%; aspect-ratio: 1; border-radius: 50%; transform: translateX(-50%);
+  background: radial-gradient(circle, #fff6d6 0%, #ffd27a 36%, #ffae48 58%, rgba(255,150,60,0) 71%); }
+.studio-card .window { position: absolute; z-index: 1; left: 7%; top: 12%; width: 92%; filter: drop-shadow(0 18px 30px rgba(10,8,40,.45)); transition: transform .35s ease; }
+.studio-card:hover .window { transform: translateY(-6px); }
+.studio-card .body { padding: clamp(1.4rem, 3vw, 2.2rem); }
+.studio-card .icon { width: 64px; height: 64px; margin-bottom: .8rem; filter: drop-shadow(0 8px 16px rgba(0,0,0,.35)); }
+.studio-card h3 { font-size: 1.6rem; margin: 0 0 .3rem; color: #fff; }
+.studio-card .tag { font-weight: 600; margin: 0 0 .5rem; color: #fff; }
+.studio-card p { color: var(--night-muted); margin: 0 0 .9rem; }
+.studio-card .chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0 0 1rem; padding: 0; }
+.studio-card .chips li { font-size: .78rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,.16); color: var(--night-muted); }
+.studio-card .more { font-weight: 650; color: #ffb43c; }
+.studio-all { margin-top: 1.2rem; text-align: center; }
+.studio-all a { color: var(--night-fg); }
+@media (max-width: 760px) { .studio-card { grid-template-columns: 1fr; } .studio-card .art { min-height: 0; aspect-ratio: 16 / 10; } }
+@media (prefers-reduced-motion: reduce) { .studio-card, .studio-card .window { transition: none; } .studio-card:hover, .studio-card:hover .window { transform: none; } }
 footer.site { background: var(--night); color: var(--night-muted); padding: 2.2rem var(--gutter) 3rem; text-align: center; font-size: .92rem; display: grid; gap: .6rem; }
 footer.site a { color: var(--night-fg); margin: 0 .7rem; }
 
