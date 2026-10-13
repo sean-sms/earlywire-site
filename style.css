@@ -115,6 +115,8 @@ section { padding-block: clamp(4rem, 9vw, 7.5rem); }
 /* On a phone there is no room for the button beside the menu button, so it joins the menu. */
 @media (max-width: 520px) {
   .nav-cta { display: none; }
+  .nav.simple ul li:first-child { display: none; } /* the logo already goes home */
+  .nav.simple ul { gap: .9rem; }
   .nav:not(.simple) .menu-cta { display: block; margin-top: 1rem; }
   .menu-cta .btn { width: 100%; justify-content: center; }
 }
