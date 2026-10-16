@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shared Video List | EarlyWire</title>
+<meta name="description" content="Someone shared an EarlyWire video list with you. Open it in EarlyWire to add it.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070f24">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .shared { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 18px; padding: 1.2rem 1.4rem; margin: 1.4rem 0; }
+  .shared h2 { margin: 0 0 .4rem; }
+  .shared ul { margin: .4rem 0 0; padding-left: 1.2rem; }
+  .shared li { margin: .25rem 0; }
+  .shared .terms { opacity: .7; font-size: .92em; }
+  .open { display: inline-block; margin: .6rem 0 1rem; }
+</style>
+</head>
+<body>
+<nav class="nav solid static simple" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="apple-touch-icon.png" alt="" width="30" height="30"><span class="wm">Early<i>Wire</i></span></a>
+    <ul><li><a href="./">Home</a></li><li><a href="support.html">Support</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+  </div>
+</nav>
+<main class="doc">
+<h1><b>A video list, shared with you</b></h1>
+<p>Someone sent you a video list for EarlyWire. Open it in the app to add it: it gets its own card on your Today screen, with Play all on YouTube.</p>
+
+<div class="shared" id="preview" hidden>
+  <h2 id="name"></h2>
+  <ul id="items"></ul>
+</div>
+
+<p><a class="btn sun open" id="open" href="#">Open in EarlyWire</a></p>
+<p class="terms">If EarlyWire opens but doesn't offer to add the list, update EarlyWire to the latest version, then tap the link again.</p>
+<p id="bad" hidden>This link looks incomplete. Ask whoever sent it to share the list again.</p>
+
+<h2><b>Don't have EarlyWire yet?</b></h2>
+<p>EarlyWire is coming to the App Store for iPhone, iPad and Mac. <a href="./">See what it does</a>, then come back to this link once it's installed.</p>
+
+<p class="terms"><b>Privacy:</b> the list travels inside the link itself, after the “#”, which your browser never sends to this website. Nothing about it is stored here. It holds only the list's name, its channels or search, and its rules, never the sender's keys.</p>
+</main>
+<footer class="foot">
+  <p>&copy; 2026 SMS Apps LLC. EarlyWire is made by <a href="https://sms-apps.com">SMS Apps</a> and is not affiliated with or endorsed by YouTube, Google or Anthropic.</p>
+</footer>
+<script>
+// A new link opened in the same tab only changes the "#" part, which doesn't reload the page.
+window.addEventListener("hashchange", function () { location.reload(); });
+(function () {
+  var hash = location.hash.slice(1);
+  var open = document.getElementById("open");
+  if (!/^1\.[A-Za-z0-9_-]+$/.test(hash)) {
+    open.hidden = true;
+    document.getElementById("bad").hidden = false;
+    return;
+  }
+  open.href = "earlywire://list#" + hash;
+  // Show the brief's name and topics, read here in the browser.
+  try {
+    var b64 = hash.slice(2).replace(/-/g, "+").replace(/_/g, "/");
+    while (b64.length % 4) b64 += "=";
+    var bytes = Uint8Array.from(atob(b64), function (c) { return c.charCodeAt(0); });
+    var show = function (text) {
+      var shared = JSON.parse(text);
+      document.getElementById("name").textContent = shared.name || "Shared list";
+      var list = document.getElementById("items");
+      var add = function (t) { var li = document.createElement("li"); li.textContent = t; list.appendChild(li); };
+      if (shared.searchWords) {
+        add((shared.videoIDs || []).length + " videos picked from a YouTube search for “" + shared.searchWords + "”");
+      } else {
+        (shared.channels || []).slice(0, 40).forEach(function (c) { add(c.name || c.handle); });
+      }
+      document.getElementById("preview").hidden = false;
+    };
+    if (window.DecompressionStream) {
+      new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).text()
+        .then(show).catch(function () { try { show(new TextDecoder().decode(bytes)); } catch (e) {} });
+    }
+  } catch (e) { /* the preview is optional; the button still works */ }
+})();
+</script>
+</body>
+</html>
