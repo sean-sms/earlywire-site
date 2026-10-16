@@ -48,6 +48,8 @@
   <p>&copy; 2026 SMS Apps LLC. EarlyWire is made by <a href="https://sms-apps.com">SMS Apps</a> and is not affiliated with or endorsed by YouTube, Google or Anthropic.</p>
 </footer>
 <script>
+// A new link opened in the same tab only changes the "#" part, which doesn't reload the page.
+window.addEventListener("hashchange", function () { location.reload(); });
 (function () {
   var hash = location.hash.slice(1);
   var open = document.getElementById("open");
