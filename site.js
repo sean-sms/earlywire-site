@@ -116,17 +116,17 @@
   }
 
   /* ---- compose your morning ---- */
-  var chips = $$('.chip'), cards = $$('.tcard'), mins = { sports: 45, news: 31, music: 39, brief: 0 };
+  var chips = $$('.chip'), cards = $$('.tcard'), counts = { sports: [8, 'video'], news: [10, 'story'], music: [12, 'song'], brief: [20, 'brief item'] };
   function compose() {
-    var total = 0, n = 0;
+    var parts = [], n = 0;
     chips.forEach(function (c) {
       var on = c.getAttribute('aria-pressed') === 'true', k = c.getAttribute('data-k');
       var card = $('.tcard[data-k="' + k + '"]');
       if (card) card.classList.toggle('on', on);
-      if (on) { total += mins[k]; n++; }
+      if (on) { var c2 = counts[k]; parts.push(c2[0] + ' ' + (c2[1] === 'story' ? 'stories' : c2[1] + 's')); n++; }
     });
     $('#todayEmpty').hidden = n > 0;
-    $('#totalMin').textContent = total > 0 ? total + ' min of video and music' : (n > 0 ? 'Written only' : '0 min');
+    $('#totalMin').textContent = parts.length ? parts.join(' \u00b7 ') : 'Nothing yet';
     $('#totalLabel').textContent = n === 1 ? '1 part' : n + ' parts';
   }
   chips.forEach(function (c) {
