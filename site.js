@@ -116,7 +116,7 @@
   }
 
   /* ---- compose your morning ---- */
-  var chips = $$('.chip'), cards = $$('.tcard'), counts = { sports: [8, 'video'], news: [10, 'story'], music: [12, 'song'], brief: [20, 'brief item'] };
+  var chips = $$('.chip'), cards = $$('.tcard'), counts = { deep: [9, 'new item'], news: [10, 'story'], lists: [8, 'video'], music: [12, 'song'] };
   function compose() {
     var parts = [], n = 0;
     chips.forEach(function (c) {
